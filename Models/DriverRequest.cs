@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -178,13 +178,13 @@ namespace SuitDriver
 
     public class Demographic
     {
-        public int profile { get; set; }
-        public int testNum { get; set; }
+        public Nullable<int> profile { get; set; }
+        public Nullable<int> testNum { get; set; }
         public string patientID { get; set; }
         public string pFirstName { get; set; }
         public string pMiddleName { get; set; }
         public string pLastName { get; set; }
-        public int pBirthDate { get; set; }
+        public Nullable<int> pBirthDate { get; set; }
         public string pAddress { get; set; }
         public string pCity { get; set; }
         public string pZip { get; set; }
@@ -192,15 +192,15 @@ namespace SuitDriver
         public string pGender { get; set; }
         public string pAge { get; set; }
         public List<PComment> pComments { get; set; }
-        public int episodeDate { get; set; }
-        public int episodeCode { get; set; }
-        public int orderName { get; set; }
+        public Nullable<int> episodeDate { get; set; }
+        public Nullable<int> episodeCode { get; set; }
+        public Nullable<int> orderName { get; set; }
         public List<OrderComment> orderComments { get; set; }
-        public int senderCode { get; set; }
+        public Nullable<int> senderCode { get; set; }
         public string senderName { get; set; }
-        public int senderFacilityCode { get; set; }
+        public Nullable<int> senderFacilityCode { get; set; }
         public bool validSender { get; set; }
-        public int doctorCode { get; set; }
+        public Nullable<int> doctorCode { get; set; }
         public string doctorFirstName { get; set; }
         public string doctorLastName { get; set; }
         public string doctorPhone { get; set; }
@@ -209,29 +209,29 @@ namespace SuitDriver
         public string doctorStreet3 { get; set; }
         public string doctorCity { get; set; }
         public string doctorZip { get; set; }
-        public int doctorAdditionalCode { get; set; }
+        public Nullable<int> doctorAdditionalCode { get; set; }
         public string doctorState { get; set; }
-        public int tube { get; set; }
-        public int sampleTubeType { get; set; }
+        public Nullable<int> tube { get; set; }
+        public Nullable<int> sampleTubeType { get; set; }
         public string sampleTubeName { get; set; }
-        public int sampleLabCode { get; set; }
-        public int substance { get; set; }
+        public Nullable<int> sampleLabCode { get; set; }
+        public Nullable<int> substance { get; set; }
         public string substShortName { get; set; }
         public string substFullName { get; set; }
-        public int sampleDate { get; set; }
-        public int sampleTime { get; set; }
-        public int sampleCollectionDate { get; set; }
-        public int sampleCollectionTime { get; set; }
-        public int sampleReceivedDate { get; set; }
-        public int sampleReceivedTime { get; set; }
-        public int sampleDynamicTime { get; set; }
-        public int sampleCollPlaceCode { get; set; }
+        public Nullable<int> sampleDate { get; set; }
+        public Nullable<int> sampleTime { get; set; }
+        public Nullable<int> sampleCollectionDate { get; set; }
+        public Nullable<int> sampleCollectionTime { get; set; }
+        public Nullable<int> sampleReceivedDate { get; set; }
+        public Nullable<int> sampleReceivedTime { get; set; }
+        public Nullable<int> sampleDynamicTime { get; set; }
+        public Nullable<int> sampleCollPlaceCode { get; set; }
         public string sampleCollPlaceShortName { get; set; }
         public string sampleCollPlaceFullName { get; set; }
-        public int reqPerformSite { get; set; }
-        public int reqMachine { get; set; }
+        public Nullable<int> reqPerformSite { get; set; }
+        public Nullable<int> reqMachine { get; set; }
         public string profileFullName { get; set; }
-        public double testResult { get; set; }
+        public Nullable<double> testResult { get; set; }
         public List<AllSampleRequest> allSampleRequests { get; set; }
         public List<OrganismsAndAntibiotic> organismsAndAntibiotics { get; set; }
     }
@@ -260,6 +260,7 @@ namespace SuitDriver
     public class DriverRequest
     {
         public string accession { get; set; }
+        public Demographic demographic { get; set; }
         public List<Test> tests { get; set; }
     }
 
